@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	     <link rel="icon" href="dashboard.png"/>
+		<meta charset="UTF-8">
+		<title>Login</title>
+		
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black  ;
+}
+
+li {
+    float: right;
+}
+
+.li-left {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;  
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+
+/**/
+a:link {
+    color: #0404B4;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:visited {
+    color: #0404B4;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    color: #0404B4;
+    background-color: transparent;
+    text-decoration: none;
+}
+a:active {
+    color: #0404B4;
+    background-color: transparent;
+    text-decoration: none;
+    }
+form {border: 3px solid #f1f1f1;
+       width: 30%;
+       }
+
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.pwd {
+    float: right;
+    padding-top: 16px;
+}
+
+</style>
+		
+	</head>
+	<body>
+		<ul>
+ 			<li class= "li-left"><a href="/DashboardProject/" style= "color: white;">Dashboard Project</a></li>
+  			<li><a href="/DashboardProject/" style= "color: white;">Back</a></li>
+		</ul>
+		<h3 style="padding-left: 11%;">Authorization</h3>
+		
+		<form action="loginServlet" method="post">
+		 <div class="container">
+		
+			    <label for="user"><b>Username</b></label>
+			    <input type="text" placeholder="Enter Username" name="login" required>
+			
+			    <label for="pwd"><b>Password</b></label>
+			    <input type="password" placeholder="Enter Password" name="pwd" required>
+			        
+			    <button type="submit">Login</button>
+		  
+		     </div>
+		    </form>
+			  
+	</body>
+</html>
