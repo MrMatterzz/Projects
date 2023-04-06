@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" href="icons8-survey-100.png"/>
+    <title>Social Surveying</title>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css" />
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li id="name"><a href="/SocialSurveying/"> <img src="online-computer-survey.png" height="40" style="float:left;"/> SOCIAL SURVEYING</a></li>
+            <li><a href="infoPage.html">Про Сайт</a></li>      
+            <li class="li-right"><a id="lgnBtn" href="#">Власник?</a></li>    
+        </ul> 
+    </div>
+    <div id="siteBody">
+        <div id='leftside'></div>
+        <div class="surveyChose" id="infotext">
+            <p>Даний сайт був створений для проведення соціологічного опитування<br>
+            від організації "СоцОпитач".</p><br>
+            <p>Опитування було розроблене огранізацією "СоцОпитач".<br>
+            Результати опитування абсолютно конфіденційні жодні персональні дані <br>
+            не передаються третім особам.</p>
+            <p>Якщо виникають будь-які питання ви завжди можете зв'язатися з нами:<br>
+                +38096000000 example@gmail.com</p>
+        </div>
+        <div id='rightside'>
+            <div class="login hidden" id="lgn">
+                <form action="loginServlet" id="logForm">
+                    <label for="user"><b>Логін</b></label>
+                    <input type="text" placeholder="Введіть логін" name="login" required>
+                    <label for="pwd"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введіть пароль" name="pwd" required>
+                    <button type="submit">Увійти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="mainPage.js"></script>
+</body>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="icon" href="icons8-survey-100.png"/>
+    <title>Social Surveying</title>
+    <link rel="stylesheet" type="text/css" href="indexStyle.css" />
+</head>
+<body>
+    <div id="header">
+        <ul>
+            <li id="name"><a href="/SocialSurveying/"> <img src="online-computer-survey.png" height="40" style="float:left;"/>SOCIAL SURVEYING</a></li>
+            <li><a href="infoPage.html">Про Сайт</a></li>      
+            <li class="li-right"><a id="lgnBtn" href="#">Власник?</a></li>    
+        </ul> 
+    </div>
+    <div id="siteBody">
+        <div id='leftside'></div>
+        <div class="surveyChose">
+            <p>На даній сторінці ви пройдете опитування представлене організацією "СоцОпитач" <br>
+                Вам буде потрібно заповнити анкетну інформацію яка включає вишу електронну пошту, <br>
+                Вік та регіон у якому ви знаходитесь. Усі поля обов'язкові для заповнення.
+            </p>
+            <p>
+                Після цього ви перейдете до самого опитування. Воно складається з 10 питань <br>
+                і не займе у вас більше 10 хвилин. <br>
+                Натисніть кнопку нижче щоб перейти до опитування.
+            </p>
+            <button class ="proceedBtn" id="startSurv">Розпочати</button>
+            <form action="submission-record" method="post">
+            <div class="anketa hidden">           
+                <label for="email">E-Mail</label>
+                <input type="text" placeholder="Введіть електронну адресу" name="email" size="35">
+                <label for="age">Вік</label>
+                <input type="number" placeholder="Введіть свій вік" name="age" size="20">
+                <label for="region">Ваш Регіон</label>
+                <input type="text" placeholder="Введіть ваш регіон" name="region" size="35">
+                <button type="button" class = "anketa hidden" id="proceedSurv">Продовжити</button>                                                  
+            </div>
+            <div class="survey hidden">
+                <p id="Q1">1. На скільки ви підтримуєте президенство Зеленського?<br>
+                    <input type="radio" name="Q1ans" value="1">Повністю підтримую <br>
+                    <input type="radio" name="Q1ans" value="2">Абсолютно не підтримую <br>
+                    <input type="radio" name="Q1ans" value="3">Нейтрально <br>
+                </p>
+                <p id="Q2">2. Якби завтра проводились вибори, чм проголосували б ви за Зеленського?<br>
+                    <input type="radio" name="Q2ans" value="1">Так! <br>
+                    <input type="radio" name="Q2ans" value="2">Ні! <br>
+                    <input type="radio" name="Q2ans" value="3">Не можу відповісти <br>
+                </p>
+                <p id="Q3">3. Чи задоволені ви своїм фінансовим положенням?<br>
+                    <input type="radio" name="Q3ans" value="1">Так <br>
+                    <input type="radio" name="Q3ans" value="2">Ні <br>
+                    <input type="radio" name="Q3ans" value="3">Не можу відповісти <br>
+                </p>
+                <p id="Q4">4. Чи хотіли б ви покинути країну?<br>
+                    <input type="radio" name="Q4ans" value="1">Так <br>
+                    <input type="radio" name="Q4ans" value="2">Ні <br>
+                    <input type="radio" name="Q4ans" value="3">Не можу відповісти <br>
+                </p>
+                <p id="Q5">5. Наскільки ви задоволені діями верховної ради?<br>
+                    <input type="radio" name="Q5ans" value="1">Дуже задоволений <br>
+                    <input type="radio" name="Q5ans" value="2">Абсолютно не задоволений <br>
+                    <input type="radio" name="Q5ans" value="3">Нейтрально <br>
+                </p>
+                <p id="Q6">6. Як ви оцінюєте екологічною ситуацію у вашому регіоні?<br>
+                    <input type="radio" name="Q6ans" value="1">Ідеально <br>
+                    <input type="radio" name="Q6ans" value="2">Задовільно <br>
+                    <input type="radio" name="Q6ans" value="3">Погано <br>
+                    <input type="radio" name="Q6ans" value="4">Катастрофа <br>
+                </p>
+                <p id="Q7">7. Який у вас рівень освіти?<br>
+                    <input type="radio" name="Q7ans" value="1">Середня <br>
+                    <input type="radio" name="Q7ans" value="2">Вища <br>
+                    <input type="radio" name="Q7ans" value="3">Немає <br>
+                </p>
+                <p id="Q8">8. Як ви оцінюєте стан доріг у вашому регіоні?<br>
+                    <input type="radio" name="Q8ans" value="1">Ідеально <br>
+                    <input type="radio" name="Q8ans" value="2">Задовільно <br>
+                    <input type="radio" name="Q8ans" value="3">Погано <br>
+                    <input type="radio" name="Q8ans" value="4">Катастрофа <br>
+                </p>
+                <p id="Q9">9. Як ви оцінюєте своє житло?<br>
+                    <input type="radio" name="Q9ans" value="1">Ідеально <br>
+                    <input type="radio" name="Q9ans" value="2">Задовільно <br>
+                    <input type="radio" name="Q9ans" value="3">Погано <br>
+                    <input type="radio" name="Q9ans" value="4">Катастрофа <br>
+                </p>
+                <p id="Q10">10. Як ви відповіли на перше запитання?<br>
+                    <input type="radio" name="Q10ans" value="1">Повністю підтримую <br>
+                    <input type="radio" name="Q10ans" value="2">Абсолютно не підтримую <br>
+                    <input type="radio" name="Q10ans" value="3">Нейтрально <br>
+                </p>
+                <button type="submit" class="survey hidden" id="finishSurv">Завершити</button>            
+            </div>
+           </form>
+        </div>
+        <div id='rightside'>
+            <div class="login hidden" id="lgn">
+                <form action="loginServlet" id="logForm" method="post">
+                    <label for="user"><b>Логін</b></label>
+                    <input type="text" placeholder="Введіть логін" name="login" required>
+                    <label for="pwd"><b>Пароль</b></label>
+                    <input type="password" placeholder="Введіть пароль" name="pwd" required>
+                    <button type="submit">Увійти</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="mainPage.js"></script>
+</html>
